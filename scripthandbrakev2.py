@@ -7,9 +7,11 @@ from os import listdir
 from os.path import isfile, join
 # utilisation python scripthandbrakev2.py "chemin de fichier" 
 # le script va faire un listing des fichier dans le dossier et va convertir les video en x265 
+# https://handbrake.fr/docs/en/latest/cli/cli-guide.html
 def main(argv):
 	handbrakecli = "HandbrakeCLI.exe"
-	option = " -f mkv -P -e x265 -q 20 -B 160"
+#	option = " -f mkv -P -e x265 -q 20 -B 160"
+	option = " -f mkv -P -e x265 -q 21 -E copy"
 	inputfile = sys.argv[1]
 	print 'nombre argument', len(sys.argv)
 	if len(sys.argv) > 2:
