@@ -24,11 +24,10 @@ def main(argv):
 	elif len(sys.argv) > 2:
 		nouveauNom = sys.argv[2]
 
-
+	indice = 1
 	onlyfiles = [f for f in listdir(inputfile) if isfile(join(inputfile, f))]
 	print 'liste de fichiers', onlyfiles
 	for f in onlyfiles:
-		indice = 1
 		comandein =   inputfile + '\\' + f
 		#test si nouveauNom
 		if len(nouveauNom) == 0: 
